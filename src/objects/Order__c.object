@@ -56,13 +56,25 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Member__c</fullName>
-        <deleteConstraint>Restrict</deleteConstraint>
+        <fullName>Contractor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Member</label>
+        <label>Contractor</label>
         <referenceTo>FieloAlpha__Member__c</referenceTo>
-        <relationshipLabel>Orders</relationshipLabel>
-        <relationshipName>Orders</relationshipName>
+        <relationshipLabel>Orders (Contractor)</relationshipLabel>
+        <relationshipName>Orders2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Retailer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Retailer</label>
+        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <relationshipLabel>Orders (Retailer)</relationshipLabel>
+        <relationshipName>Orders1</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
@@ -80,10 +92,34 @@
                 <fullName>Closed</fullName>
                 <default>false</default>
             </picklistValues>
+            <picklistValues>
+                <fullName>Delivered</fullName>
+                <default>false</default>
+            </picklistValues>
             <sorted>false</sorted>
         </picklist>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TotalAmount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Amount</label>
+        <summarizedField>Payment__c.Amount__c</summarizedField>
+        <summaryForeignKey>Payment__c.Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TotalItems__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Items</label>
+        <summarizedField>OrderItem__c.Quantity__c</summarizedField>
+        <summaryForeignKey>OrderItem__c.Order__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
     </fields>
     <gender>Feminine</gender>
     <label>Order (Custom)</label>
@@ -100,4 +136,18 @@
     <pluralLabel>Orders</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>RevertRecord</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Revert Record</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT (&quot;/soap/ajax/14.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/14.0/apex.js&quot;)}
+
+var status = sforce.apex.execute(&apos;OrderService&apos;, &apos;revertRecord&apos;, {recordId: &apos;{!Order__c.Id}&apos;});
+alert(status);</url>
+    </webLinks>
 </CustomObject>
