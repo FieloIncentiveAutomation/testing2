@@ -85,16 +85,20 @@
         <label>Status</label>
         <picklist>
             <picklistValues>
-                <fullName>Open</fullName>
+                <fullName>Pending Approval</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Closed</fullName>
+                <fullName>Approved</fullName>
                 <default>false</default>
             </picklistValues>
             <picklistValues>
-                <fullName>Delivered</fullName>
+                <fullName>Rejected</fullName>
                 <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
             </picklistValues>
             <sorted>false</sorted>
         </picklist>
