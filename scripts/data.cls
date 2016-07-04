@@ -22,8 +22,8 @@ try{
 	//Creo segmentos público y privado
 	Id defProgramId = FieloAlpha.ProgramUtil.getDefaultProgram();
 	List<FieloAlpha__RedemptionRule__c> segments = new List<FieloAlpha__RedemptionRule__c>();
-	segments.add(Name = 'Guest', RecordTypeId = publicId, FieloAlpha__Program__c = defProgramId);
-	segments.add(Name = 'Registered', RecordTypeId = privateId, FieloAlpha__Program__c = defProgramId);
+	segments.add(new FieloAlpha__RedemptionRule__c(Name = 'Guest', RecordTypeId = publicId, FieloAlpha__Program__c = defProgramId));
+	segments.add(new FieloAlpha__RedemptionRule__c(Name = 'Registered', RecordTypeId = privateId, FieloAlpha__Program__c = defProgramId));
 	insert segments;
 
 	//Creo el badge 
