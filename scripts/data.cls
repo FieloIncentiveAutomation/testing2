@@ -5,13 +5,13 @@ try{
 	Id privateId;
 	Id catItemId;
 	for(RecordType rt : [SELECT Id, DeveloperName, NamespacePrefix FROM RecordType WHERE DeveloperName IN ('CategoryItem', 'Private', 'Public')]){
-		if(rt.NamespacePrefix = 'FieloAlpha' && rt.DeveloperName = 'CategoryItem'){
+		if(rt.NamespacePrefix == 'FieloAlpha' && rt.DeveloperName == 'CategoryItem'){
 			catItemId = rt.Id;
 			continue;
-		}else if(rt.NamespacePrefix = 'FieloAlpha' && rt.DeveloperName = 'Public'){
+		}else if(rt.NamespacePrefix == 'FieloAlpha' && rt.DeveloperName == 'Public'){
 			publicId = rt.Id;
 			continue;
-		}else if(rt.NamespacePrefix = 'FieloAlpha' && rt.DeveloperName = 'Private'){
+		}else if(rt.NamespacePrefix == 'FieloAlpha' && rt.DeveloperName == 'Private'){
 			privateId = rt.Id;
 			continue;
 		}
