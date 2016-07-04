@@ -129,7 +129,10 @@ try{
 	productsToInsert.add(wallControl);
 	Product2 AFCWire = new Product2(Name = 'Wire: Gray Cable', Family = 'Wire');
 	productsToInsert.add(AFCWire);
+	
+	insert productsToInsert;
 
 }catch(Exception e){
+	System.debug(e);
 	Database.rollback(sp);
 }
