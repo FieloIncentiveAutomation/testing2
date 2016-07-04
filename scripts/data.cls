@@ -123,6 +123,12 @@ try{
 	banners.add(new FieloAlpha__Banner__c(Name = 'Banner 5', FieloAlpha__AttachmentId__c = 'https://s32.postimg.org/tpj0ujoz9/banner5.jpg', FieloAlpha__isActive__c = true));
 
 	insert banners;
+	
+	List<Product2> productsToInsert = new List<Product2>();
+	Product2 wallControl = new Product2(Name = 'Switch: White 4-Function Wall Control', Family = 'Switch');
+	productsToInsert.add(wallControl);
+	Product2 AFCWire = new Product2(Name = 'Wire: Gray Cable', Family = 'Wire');
+	productsToInsert.add(AFCWire);
 
 }catch(Exception e){
 	Database.rollback(sp);
