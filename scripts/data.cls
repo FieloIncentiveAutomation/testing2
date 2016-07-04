@@ -3,8 +3,8 @@ try{
 	//Hago un query a los record types al principio y los asigno
 	Id publicId;
 	Id privateId;
-	for(RecordType rt : [SELECT Id, DeveloperName, NamespacePrefix FROM RecordType WHERE DeveloperName IN ('CategoryItem', 'Private', 'Public')]){
 	Id catItemId;
+	for(RecordType rt : [SELECT Id, DeveloperName, NamespacePrefix FROM RecordType WHERE DeveloperName IN ('CategoryItem', 'Private', 'Public')]){
 		if(rt.NamespacePrefix = 'FieloAlpha' && rt.DeveloperName = 'CategoryItem'){
 			catItemId = rt.Id;
 			continue;
