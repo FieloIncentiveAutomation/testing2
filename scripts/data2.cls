@@ -17,6 +17,8 @@ try{
 	categories.add(autoCategory);
 	FieloAlpha__Category__c bazarCategory = new FieloAlpha__Category__c(Name = 'Bazar', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Categorias/ROJOS/regalo.png');
 	categories.add(bazarCategory);
+	FieloAlpha__Category__c discountCategory = new FieloAlpha__Category__c(Name = 'Descuentos', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/admin/images/categorias/ROJOS/logo%20oportunidades.jpg');
+	categories.add(discountCategory);
 
 	insert categories;
 
@@ -45,6 +47,10 @@ try{
 	rewards.add(cubiertos);
 	FieloAlpha__Reward__c maqRavioles = new FieloAlpha__Reward__c(Name = 'Máquina de ravioles', FieloAlpha__Category__c = bazarCategory.Id, FieloAlpha__Description__c = 'Máquina para hacer ravioles frescos con rellenos a elección, realizada en acero inoxidable y laminador estriado.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_112367@-2367b.jpg', FieloAlpha__PointsCant__c = 41775, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
 	rewards.add(maqRavioles);
+
+	//Descuentos
+	FieloAlpha__Reward__c discount5 = new FieloAlpha__Reward__c(Name = '5% discount', FieloAlpha__Category__c = discountCategory.Id, FieloAlpha__Description__c = '5% de descuento sobre el total de la próxima compra de nuestros productos.', FieloAlpha__AttachmentId__c = 'http://www.discountspout.com/images/coupons/coupon_3581.gif', FieloAlpha__PointsCant__c = 100000, FieloAlpha__VoucherCreationMode__c = 'Unlimited', FieloAlpha__isInstantReward__c = true);
+	rewards.add(discount5);
 
 	insert rewards;
 
