@@ -36,14 +36,6 @@ try{
 	categories.add(autoCategory);
 	FieloAlpha__Category__c bazarCategory = new FieloAlpha__Category__c(Name = 'Bazar', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Categorias/ROJOS/regalo.png');
 	categories.add(bazarCategory);
-	FieloAlpha__Category__c cuidadoPersonalCategory = new FieloAlpha__Category__c(Name = 'Cuidado Personal', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Categorias/ROJOS/cuidado_personal.png');
-	categories.add(cuidadoPersonalCategory);
-	FieloAlpha__Category__c deporteCategory = new FieloAlpha__Category__c(Name = 'Deporte', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Categorias/ROJOS/deportes.png');
-	categories.add(deporteCategory);
-	FieloAlpha__Category__c electroCategory = new FieloAlpha__Category__c(Name = 'Electrodomésticos', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Categorias/ROJOS/electro_02.png');
-	categories.add(electroCategory);
-	FieloAlpha__Category__c discountCategory = new FieloAlpha__Category__c(Name = 'Descuentos', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/admin/images/categorias/ROJOS/logo%20oportunidades.jpg');
-	categories.add(discountCategory);	
 
 	insert categories;
 
@@ -72,46 +64,6 @@ try{
 	rewards.add(cubiertos);
 	FieloAlpha__Reward__c maqRavioles = new FieloAlpha__Reward__c(Name = 'Máquina de ravioles', FieloAlpha__Category__c = bazarCategory.Id, FieloAlpha__Description__c = 'Máquina para hacer ravioles frescos con rellenos a elección, realizada en acero inoxidable y laminador estriado.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_112367@-2367b.jpg', FieloAlpha__PointsCant__c = 41775, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
 	rewards.add(maqRavioles);
-
-	//Cuidado personal
-	FieloAlpha__Reward__c lumeaEssential = new FieloAlpha__Reward__c(Name = 'Lumea Essential', FieloAlpha__Category__c = cuidadoPersonalCategory.Id, FieloAlpha__Description__c = 'Sistema de depilación con tecnología IPL. Lámpara de 100.000 pulsos que no necesita reemplazo. Adaptada para un uso seguro y eficaz en tu propio hogar.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117708@-7708b.jpg', FieloAlpha__PointsCant__c = 382410, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(lumeaEssential);
-	FieloAlpha__Reward__c perfume = new FieloAlpha__Reward__c(Name = 'Perfume Flower in the Air', FieloAlpha__Category__c = cuidadoPersonalCategory.Id, FieloAlpha__Description__c = 'Fragancia femenina Flower in the air eau de toilette de Kenzo. Delicado perfume floral, cítrico y ultrafesco. Presentación de 100 ml.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117994@-7994b.jpg', FieloAlpha__PointsCant__c = 101330, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(perfume);
-	FieloAlpha__Reward__c nebulizador = new FieloAlpha__Reward__c(Name = 'Nebulizador a pistón Silfab', FieloAlpha__Category__c = cuidadoPersonalCategory.Id, FieloAlpha__Description__c = 'Nebulizador a pistón NeoVento Silfab. Con compartimiento para guardar el kit de nebulización. Manos libres con el porta pipeta incluido. Práctico guardacable en su parte posterior. Incluye máscara para adultos, máscara para niños, manguera, pipeta.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_11848@-848b.jpg', FieloAlpha__PointsCant__c = 65460, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(nebulizador);
-	FieloAlpha__Reward__c afeitadora = new FieloAlpha__Reward__c(Name = 'Afeitadora Philips HQ6949', FieloAlpha__Category__c = cuidadoPersonalCategory.Id, FieloAlpha__Description__c = 'Afeitadora con tecnología Close Cut. Posee tres cabezales con movimiento conjunto e individual y corta patillas. Voltaje universal automático (110-220 V). Origen: Argentina.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117566@-7566b.jpg', FieloAlpha__PointsCant__c = 65460, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(afeitadora);
-	FieloAlpha__Reward__c planchita = new FieloAlpha__Reward__c(Name = 'Planchita Ion Colors Ga.Ma.', FieloAlpha__Category__c = cuidadoPersonalCategory.Id, FieloAlpha__Description__c = 'Planchita Ion Colors Ga.Ma. Con patines de tecnología Ceramic Ion. Alta emisión de iones, de rápido calentamiento con cable rotativo con aro para colgarla. Temperatura 210 ºC/410ºF. Versiones: rosa, verde,violeta y celeste. Color según disponibilidad.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117262@-7262b.jpg', FieloAlpha__PointsCant__c = 65460, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(planchita);
-
-	//Deporte
-	FieloAlpha__Reward__c bicicleta = new FieloAlpha__Reward__c(Name = 'Bicicleta Playera Fiorenza rodado 26', FieloAlpha__Category__c = deporteCategory.Id, FieloAlpha__Description__c = 'Bicicleta playera para adulto, rodado 26. Con freno trasero contrapedal. Cómodo asiento playero. Color según disponibilidad.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117285@-7285b.jpg', FieloAlpha__PointsCant__c = 382410, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(bicicleta);
-	FieloAlpha__Reward__c rollers = new FieloAlpha__Reward__c(Name = 'Rollers extensible Heitz DS1 talle M', FieloAlpha__Category__c = deporteCategory.Id, FieloAlpha__Description__c = 'Roller Skates de 4 ruedas. Talle extensible apto para talle 35 al 38. Cierre Dúo Lock. Ajuste triple. Confeccionados en tela microporosa. Freno en bota derecha. Rulemanes High Speed Carbon ABEC5. Ruedas de 70 mm. Color gris, rojo o azul según disponibilidad.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_118116@-8116b.jpg', FieloAlpha__PointsCant__c = 65340, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(rollers);
-	FieloAlpha__Reward__c paloHockey = new FieloAlpha__Reward__c(Name = 'Palo de Hockey Cougar Black Arrow', FieloAlpha__Category__c = deporteCategory.Id, FieloAlpha__Description__c = 'Palo de Hockey de Fibra de Vidrio 80% y Carbono 20%. Posee un diseño aerodinámico que produce una mejor eficiencia energética. Longitud: 37, 37.5, 38 pulgadas. Altura jugador: entre 1.65 m a 1.80 m aproximados. Posee grip anatómico.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117343@-7343b.jpg', FieloAlpha__PointsCant__c = 48265, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(paloHockey);																																																																										
-	FieloAlpha__Reward__c pelotaBasket = new FieloAlpha__Reward__c(Name = 'Pelota Basket All Star', FieloAlpha__Category__c = deporteCategory.Id, FieloAlpha__Description__c = 'Pelota Básket AllStar, número 7 oficial NBA.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_118293@-8293b.jpg', FieloAlpha__PointsCant__c = 39445, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(pelotaBasket);
-	FieloAlpha__Reward__c pelotasTenis = new FieloAlpha__Reward__c(Name = 'Tubo de pelotas de Tenis Open Us Wilson', FieloAlpha__Category__c = deporteCategory.Id, FieloAlpha__Description__c = 'Tubo de 3 pelotas de tenis Wilson.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_114553@-4553b.jpg', FieloAlpha__PointsCant__c = 22750, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(pelotasTenis);
-
-	//Electrodomésticos
-	FieloAlpha__Reward__c heladera = new FieloAlpha__Reward__c(Name = 'Heladera Eslabón de Lujo', FieloAlpha__Category__c = electroCategory.Id, FieloAlpha__Description__c = 'Heladera Eslabón de Lujo no frost de 277 litros. Color inoxidable.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_118526@-8526b.jpg', FieloAlpha__PointsCant__c = 728875, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(heladera);
-	FieloAlpha__Reward__c aireAcondicionado = new FieloAlpha__Reward__c(Name = 'Aire acondicionado F/C LG', FieloAlpha__Category__c = electroCategory.Id, FieloAlpha__Description__c = 'Aire acondicionado Frío/ Calor, 2200 frigorías. Cuenta con el nuevo filtro 3M tecnología exclusiva de LF, que eliminan polvo microscópico, agentes alergénicos, olores, humo de tabaco e incluso ácaros. Eficiencia energética tipo A. Cuenta con sistema Power Cooling, programa de enfriado rápido y deshumidificación.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117242@-7242b.jpg', FieloAlpha__PointsCant__c = 583875, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(aireAcondicionado);
-	FieloAlpha__Reward__c lavarropas = new FieloAlpha__Reward__c(Name = 'Lavarropas LG', FieloAlpha__Category__c = electroCategory.Id, FieloAlpha__Description__c = 'Lavarropas LG con capacidad: 8 Kg, 700 RPM, Sistema de Lavado Turbo Drum, 8 Programas de Lavado, I-sensor, Selector de agua Frío/Caliente, Tapa vidrio templado / Panel de control digital.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_118517@-8517b.jpg', FieloAlpha__PointsCant__c = 549520, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(lavarropas);
-	FieloAlpha__Reward__c hornoElectrico = new FieloAlpha__Reward__c(Name = 'Horno eléctrico 30 litros', FieloAlpha__Category__c = electroCategory.Id, FieloAlpha__Description__c = 'Horno eléctrico Alpaca con una capacidad de 30 litros. Material de acero inoxidable, incluye una bandeja esmaltada y función de spiedo y convención. Timer de 60 minutos con timbre, potencia de 1600 W y un rango de temperatura de 100° a 250° con selector de 4 etapas de calor.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_117925@-7925b.jpg', FieloAlpha__PointsCant__c = 146350, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(hornoElectrico);
-	FieloAlpha__Reward__c ollaPresion = new FieloAlpha__Reward__c(Name = 'Olla a presión eléctrica Philips', FieloAlpha__Category__c = electroCategory.Id, FieloAlpha__Description__c = 'Recipiente interno antiadherente y duradero su cubierta exterior es de acero inoxidable para una limpieza fácil. Cuenta con período ajustable de 0 a 60 minutos para mantener la presión y temporizador fácil de programar con cuenta regresiva. Protección de control automático de la presión.', FieloAlpha__AttachmentId__c = 'https://www.icbcclub.com.ar/images/Productos/Grandes/2_118307@-8307b.jpg', FieloAlpha__PointsCant__c = 142070, FieloAlpha__Stock__c = 1000, FieloAlpha__VoucherCreationMode__c = 'Controlled By Quantity');
-	rewards.add(ollaPresion);
-
-	//Descuentos
-	FieloAlpha__Reward__c discount5 = new FieloAlpha__Reward__c(Name = '5% descuento en nuestros productos', FieloAlpha__Category__c = discountCategory.Id, FieloAlpha__Description__c = '5% de descuento sobre el total de la próxima compra de nuestros productos.', FieloAlpha__AttachmentId__c = 'http://www.discountspout.com/images/coupons/coupon_3581.gif', FieloAlpha__PointsCant__c = 100000, FieloAlpha__VoucherCreationMode__c = 'Unlimited', FieloAlpha__isInstantReward__c = true);
-	rewards.add(discount5);
 
 	insert rewards;
 
