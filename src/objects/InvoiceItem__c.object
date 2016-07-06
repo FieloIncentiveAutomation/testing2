@@ -56,49 +56,49 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Amount__c</fullName>
+        <fullName>Invoice__c</fullName>
         <externalId>false</externalId>
-        <label>Amount</label>
-        <precision>18</precision>
-        <required>true</required>
-        <scale>2</scale>
+        <label>Invoice</label>
+        <referenceTo>Invoice__c</referenceTo>
+        <relationshipLabel>Invoice Items</relationshipLabel>
+        <relationshipName>Invoice_Items</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
         <trackTrending>false</trackTrending>
-        <type>Currency</type>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
-        <fullName>Type__c</fullName>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Cash</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Credit Card</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Debit Card</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Wire Transfer</fullName>
-                <default>false</default>
-            </picklistValues>
-            <restrictedPicklist>true</restrictedPicklist>
-            <sorted>false</sorted>
-        </picklist>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Invoice Items</relationshipLabel>
+        <relationshipName>Invoice_Items</relationshipName>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
+        <type>Lookup</type>
     </fields>
-    <gender>Feminine</gender>
-    <label>Payment</label>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Invoice Item</label>
     <nameField>
-        <label>Payment Name</label>
-        <type>Text</type>
+        <displayFormat>IO-{0000}</displayFormat>
+        <label>Invoice Item Name</label>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Payments</pluralLabel>
+    <pluralLabel>Invoice Items</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

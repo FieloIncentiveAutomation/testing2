@@ -731,11 +731,11 @@
         <type>Currency</type>
     </fields>
     <fields>
-        <fullName>Order__c</fullName>
+        <fullName>Invoice__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>Order</label>
-        <referenceTo>Order__c</referenceTo>
+        <label>Invoice</label>
+        <referenceTo>Invoice__c</referenceTo>
         <relationshipLabel>Transactions</relationshipLabel>
         <relationshipName>Transactions</relationshipName>
         <required>false</required>
