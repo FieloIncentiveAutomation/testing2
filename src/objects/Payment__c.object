@@ -95,8 +95,9 @@
     <gender>Feminine</gender>
     <label>Payment</label>
     <nameField>
+        <displayFormat>Payment-{00000}</displayFormat>
         <label>Payment Name</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Payments</pluralLabel>
     <searchLayouts/>
