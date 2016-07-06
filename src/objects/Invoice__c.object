@@ -110,8 +110,8 @@
         <fullName>TotalAmount__c</fullName>
         <externalId>false</externalId>
         <label>Total Amount</label>
-        <summarizedField>InvoiceItem__c.Quantity__c</summarizedField>
-        <summaryForeignKey>InvoiceItem__c.Invoice__c</summaryForeignKey>
+        <summarizedField>Payment__c.Amount__c</summarizedField>
+        <summaryForeignKey>Payment__c.Invoice__c</summaryForeignKey>
         <summaryOperation>sum</summaryOperation>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
