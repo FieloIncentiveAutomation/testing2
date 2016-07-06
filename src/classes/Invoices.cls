@@ -15,7 +15,7 @@ public class Invoices extends SObjectDomain {
     public class Constructor implements SObjectDomain.IConstructable{
         
         public SObjectDomain construct(List<SObject> sObjectList){
-            return new Orders(sObjectList);
+            return new Invoices(sObjectList);
         }
     }   
 }
