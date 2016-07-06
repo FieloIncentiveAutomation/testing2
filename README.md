@@ -1,4 +1,4 @@
-# Demo Invoice Uploadr
+# Demo Invoice Upload
 
 <a href="https://githubsfdeploy.herokuapp.com?owner=FieloIncentiveAutomation&repo=testing2">
   <img alt="Deploy to Salesforce"
