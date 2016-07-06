@@ -75,7 +75,7 @@
         <referenceTo>FieloAlpha__Member__c</referenceTo>
         <relationshipLabel>Invoices (Retailer)</relationshipLabel>
         <relationshipName>Invoices1</relationshipName>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
