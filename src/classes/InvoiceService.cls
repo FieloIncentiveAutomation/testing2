@@ -22,7 +22,7 @@ global class InvoiceService{
         List<Invoice__c> sObjectList = (List<Invoice__c>) Database.query(soql);
 
 
-        FieloAlpha.SObjectService.processRecords(sObjectList, new Map<Id, Invoice__c>(sObjectList));
+        FieloAlpha.SObjectService.processRecords(sObjectList, null);
 
         return 'The record was processed succesfully.';
     }
