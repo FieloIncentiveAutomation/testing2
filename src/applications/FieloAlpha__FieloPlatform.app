@@ -9,7 +9,6 @@
     <tab>FieloAlpha__Reward__c</tab>
     <tab>FieloAlpha__Redemption__c</tab>
     <tab>FieloAlpha__Transaction__c</tab>
-    <tab>FieloAlpha__Email__c</tab>
     <tab>FieloAlpha__Action__c</tab>
     <tab>Invoice__c</tab>
 </CustomApplication>
