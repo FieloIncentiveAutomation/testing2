@@ -12,11 +12,11 @@ public class Invoices extends SObjectDomain {
             contractorsIds.add(record.Contractor__c);
         }
 
-        Map<Id, FieloAlpha__Member__c> contractosMap = new Map<Id, FieloAlpha__Member__c>([SELECT FieloAlpha__User__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c != null AND Id IN : contractorsIds]);
+        Map<Id, FieloAlpha__Member__c> contractorsMap = new Map<Id, FieloAlpha__Member__c>([SELECT FieloAlpha__User__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c != null AND Id IN : contractorsIds]);
 
         for(Invoice__c record : (List<Invoice__c>) records){
-            if(contractosMap.containsKey(record.Contractor__c)){
-                record.OwnerId = contractosMap.get(record.Contractor__c).FieloAlpha__User__c;
+            if(contractorsMap.containsKey(record.Contractor__c)){
+                record.OwnerId = contractorsMap.get(record.Contractor__c).FieloAlpha__User__c;
             }
         }        
 
