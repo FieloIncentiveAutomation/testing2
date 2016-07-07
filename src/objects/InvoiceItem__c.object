@@ -91,7 +91,6 @@
         <type>Number</type>
         <unique>false</unique>
     </fields>
-    <gender>Masculine</gender>
     <label>Invoice Item</label>
     <nameField>
         <displayFormat>IO-{0000}</displayFormat>

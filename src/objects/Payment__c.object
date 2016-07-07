@@ -105,7 +105,6 @@
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
-    <gender>Feminine</gender>
     <label>Payment</label>
     <nameField>
         <displayFormat>Payment-{00000}</displayFormat>
