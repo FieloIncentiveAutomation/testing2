@@ -90,7 +90,7 @@
             <isFieldManaged>false</isFieldManaged>
             <isRequired>false</isRequired>
         </availableFields>
-        <description>TransactionAdjustBackEnd</description>
+        <description>TransactionAdjustment</description>
         <label>Adjust Transaction</label>
     </fieldSets>
     <fieldSets>
@@ -723,7 +723,7 @@
         <description>The value of the purchase originating this transaction.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the purchase value.</inlineHelpText>
-        <label>Purchase Value</label>
+        <label>Value</label>
         <precision>14</precision>
         <required>false</required>
         <scale>2</scale>
@@ -895,7 +895,7 @@
     <validationRules>
         <fullName>FieloPLT__ValidateDateTime</fullName>
         <active>true</active>
-        <description>The Date &amp; Time for the Transaction must have a value</description>
+        <description>Transaction date and time must be valid.</description>
         <errorConditionFormula>ISNULL(FieloPLT__Date__c)</errorConditionFormula>
         <errorDisplayField>FieloPLT__Date__c</errorDisplayField>
         <errorMessage>The Date &amp; Time for the Transaction must have a value</errorMessage>
