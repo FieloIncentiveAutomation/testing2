@@ -2,7 +2,7 @@ global class InvoiceService{
     webservice static String revertRecord(Id recordId){
 
 
-        Map<Id, String> results = new FieloAlpha.SObjectService().revertRecords(new Set<Id>{recordId});
+        Map<Id, String> results = new FieloPLT.SObjectService().revertRecords(new Set<Id>{recordId});
         
         if(results != null){
             return results.get(recordId);
@@ -22,7 +22,7 @@ global class InvoiceService{
         List<Invoice__c> sObjectList = (List<Invoice__c>) Database.query(soql);
 
 
-        FieloAlpha.SObjectService.processRecords(sObjectList, null);
+        FieloPLT.SObjectService.processRecords(sObjectList, null);
 
         return 'The record was processed succesfully.';
     }
