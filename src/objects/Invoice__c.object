@@ -60,7 +60,7 @@
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
         <label>Contractor</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Invoices</relationshipLabel>
         <relationshipName>Invoices</relationshipName>
         <required>true</required>
@@ -72,7 +72,7 @@
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
         <label>Retailer</label>
-        <referenceTo>FieloAlpha__Member__c</referenceTo>
+        <referenceTo>FieloPLT__Member__c</referenceTo>
         <relationshipLabel>Invoices (Retailer)</relationshipLabel>
         <relationshipName>Invoices1</relationshipName>
         <required>true</required>
