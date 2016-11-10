@@ -2,7 +2,7 @@ global class InvoiceService{
     webservice static String revertRecord(Id recordId){
 
 
-        Map<Id, String> results = new FieloPLT.SObjectService().revertRecords(new Set<Id>{recordId});
+        Map<Id, String> results = FieloPLT.SObjectService.revertRecords(new Set<Id>{recordId});
         
         if(results != null){
             return results.get(recordId);
