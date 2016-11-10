@@ -262,7 +262,7 @@
         <fullName>FieloPLT__Action__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Related Action</description>
+        <description>Automatically generated related Action.</description>
         <externalId>false</externalId>
         <label>Action</label>
         <referenceTo>FieloPLT__Action__c</referenceTo>
@@ -399,7 +399,7 @@
         <fullName>FieloPLT__Date__c</fullName>
         <defaultValue>now()</defaultValue>
         <deprecated>false</deprecated>
-        <description>Date and time when transaction was done</description>
+        <description>Transaction date and time.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter date and time of this transaction.</inlineHelpText>
         <label>Date &amp; Time</label>
@@ -479,7 +479,7 @@
         <fullName>FieloPLT__Member__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
-        <description>Member related with the transaction</description>
+        <description>Member that generated the Transaction.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the member who performed this transaction.</inlineHelpText>
         <label>Member</label>
@@ -503,7 +503,7 @@
     <fields>
         <fullName>FieloPLT__PointCost__c</fullName>
         <deprecated>false</deprecated>
-        <description>The value of a point in real life currency.</description>
+        <description>Result of Transaction Points multiplied by Point Cost established in Program.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter actual cost, in the  currency of your choice, of a point in your program.</inlineHelpText>
         <label>Point Cost</label>
@@ -530,7 +530,7 @@
     <fields>
         <fullName>FieloPLT__Points__c</fullName>
         <deprecated>false</deprecated>
-        <description>It&apos;s a result to calculate rules for this transaction</description>
+        <description>Transaction Points.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the number of points produced by this transaction.</inlineHelpText>
         <label>Points</label>
