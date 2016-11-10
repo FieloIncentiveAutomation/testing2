@@ -81,13 +81,13 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>FieloAlpha__Processed__c</fields>
-        <fields>FieloAlpha__Value__c</fields>
-        <fields>FieloAlpha__Points__c</fields>
-        <fields>FieloAlpha__Member__c</fields>
-        <fields>FieloAlpha__Branch__c</fields>
+        <fields>FieloPLT__Processed__c</fields>
+        <fields>FieloPLT__Value__c</fields>
+        <fields>FieloPLT__Points__c</fields>
+        <fields>FieloPLT__Member__c</fields>
+        <fields>FieloPLT__Branch__c</fields>
         <fields>CREATED_DATE</fields>
-        <relatedList>FieloAlpha__Transaction__c.Invoice__c</relatedList>
+        <relatedList>FieloPLT__Transaction__c.Invoice__c</relatedList>
     </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
