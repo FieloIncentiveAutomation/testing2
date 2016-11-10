@@ -12,22 +12,22 @@ public class Invoices extends SObjectDomain {
             contractorsIds.add(record.Contractor__c);
         }
 
-        Map<Id, FieloAlpha__Member__c> contractorsMap = new Map<Id, FieloAlpha__Member__c>([SELECT FieloAlpha__User__c FROM FieloAlpha__Member__c WHERE FieloAlpha__User__c != null AND Id IN : contractorsIds]);
+        Map<Id, FieloPLT__Member__c> contractorsMap = new Map<Id, FieloPLT__Member__c>([SELECT FieloPLT__User__c FROM FieloPLT__Member__c WHERE FieloPLT__User__c != null AND Id IN : contractorsIds]);
 
         for(Invoice__c record : (List<Invoice__c>) records){
             if(contractorsMap.containsKey(record.Contractor__c)){
-                record.OwnerId = contractorsMap.get(record.Contractor__c).FieloAlpha__User__c;
+                record.OwnerId = contractorsMap.get(record.Contractor__c).FieloPLT__User__c;
             }
         }        
 
     }
 
     public override void onAfterInsert() {
-        FieloAlpha.SObjectService.processRecords((List<Invoice__c>) Records, null);        
+        FieloPLT.SObjectService.processRecords((List<Invoice__c>) Records, null);        
     }
 
     public override void onAfterUpdate(Map<Id,SObject> existingRecords) {
-        FieloAlpha.SObjectService.processRecords((List<Invoice__c>) Records, existingRecords);
+        FieloPLT.SObjectService.processRecords((List<Invoice__c>) Records, existingRecords);
     }
 
     public class Constructor implements SObjectDomain.IConstructable{
