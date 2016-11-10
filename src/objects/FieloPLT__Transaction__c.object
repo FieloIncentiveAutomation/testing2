@@ -91,7 +91,7 @@
             <isRequired>false</isRequired>
         </availableFields>
         <description>TransactionAdjustment</description>
-        <label>Adjust Transaction</label>
+        <label>Adjustment Transaction</label>
     </fieldSets>
     <fieldSets>
         <fullName>FieloPLT__GetCode</fullName>
@@ -720,7 +720,7 @@
         <fullName>FieloPLT__Value__c</fullName>
         <defaultValue>0</defaultValue>
         <deprecated>false</deprecated>
-        <description>The value of the purchase originating this transaction.</description>
+        <description>Transaction purchase value.</description>
         <externalId>false</externalId>
         <inlineHelpText>Enter the purchase value.</inlineHelpText>
         <label>Value</label>
