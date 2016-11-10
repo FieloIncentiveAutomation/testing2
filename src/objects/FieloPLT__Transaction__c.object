@@ -898,7 +898,7 @@
         <description>Transaction date and time must be valid.</description>
         <errorConditionFormula>ISNULL(FieloPLT__Date__c)</errorConditionFormula>
         <errorDisplayField>FieloPLT__Date__c</errorDisplayField>
-        <errorMessage>The Date &amp; Time for the Transaction must have a value</errorMessage>
+        <errorMessage>Transaction date and time must be valid.</errorMessage>
     </validationRules>
     <validationRules>
         <fullName>FieloPLT__ValidateProcessedPoints</fullName>
